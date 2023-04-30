@@ -1,2 +1,2 @@
 "# CursoReact_2" 
-"# ufg" 
+"# Proyecto del curso de React con freecodeCamp" 
