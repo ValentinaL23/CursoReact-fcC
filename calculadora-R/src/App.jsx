@@ -1,5 +1,5 @@
 import './App.css'
-import Buton from './componentes/Button'
+import Buton from '../../calculadora-R/src/componentes/Buton'
 import fcCLogo from './img/fcc-logo.png'
 
 function App() {
@@ -15,7 +15,6 @@ function App() {
       <div className='contenedor-calculadora'>
         <div className='fila'></div>
           <Buton>1</Buton>
-          <Buton>+</Buton>
         <div className='fila'></div>
         <div className='fila'></div>
         <div className='fila'></div>
