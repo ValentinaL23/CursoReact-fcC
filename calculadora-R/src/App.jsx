@@ -1,8 +1,17 @@
 import './App.css'
-import Buton from '../../calculadora-R/src/componentes/Buton'
 import fcCLogo from './img/fcc-logo.png'
+import Buton from '../../calculadora-R/src/componentes/Buton'
+import Inputt from './componentes/Inputt'
+import ButonClear from './componentes/ButonClear'
+import { useState } from 'react'
 
 function App() {
+
+  const [input, setInput] = useState('Hello');
+
+  const addInput = val => {
+    setInput(input + val);
+  };
 
   return (
     <div className="App">
@@ -13,12 +22,36 @@ function App() {
           alt='Logo de freecodeCamp' />
       </div>
       <div className='contenedor-calculadora'>
-        <div className='fila'></div>
-          <Buton>1</Buton>
-        <div className='fila'></div>
-        <div className='fila'></div>
-        <div className='fila'></div>
-        <div className='fila'></div>
+        <Inputt input={input} />
+        <div className='fila'>
+          <Buton manejarClick={addInput}>1</Buton>
+          <Buton manejarClick={addInput}>2</Buton>
+          <Buton manejarClick={addInput}>3</Buton>
+          <Buton manejarClick={addInput}>+</Buton>
+        </div>
+        <div className='fila'>
+          <Buton manejarClick={addInput}>4</Buton>
+          <Buton manejarClick={addInput}>5</Buton>
+          <Buton manejarClick={addInput}>6</Buton>
+          <Buton manejarClick={addInput}>-</Buton>
+        </div>
+        <div className='fila'>
+          <Buton manejarClick={addInput}>7</Buton>
+          <Buton manejarClick={addInput}>8</Buton>
+          <Buton manejarClick={addInput}>9</Buton>
+          <Buton manejarClick={addInput}>*</Buton>
+        </div>
+        <div className='fila'>
+          <Buton manejarClick={addInput}>0</Buton>
+          <Buton manejarClick={addInput}>.</Buton>
+          <Buton manejarClick={addInput}>=</Buton>
+          <Buton manejarClick={addInput}>/</Buton>
+        </div>
+        <div className='fila'>
+          <ButonClear manejarClear={() => setInput('')}>
+            Clear
+          </ButonClear>
+        </div>
       </div>
     </div>
   )
