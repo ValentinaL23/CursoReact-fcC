@@ -1,8 +1,8 @@
 .task-contenedor {
     width: 450px;
     min-height: 65px;
-    background-color: #1b1b32;
-    margin: 5px 0;
+    background-color: #3737bb;
+    margin: 5px 0 0 50px;
     padding: 8px 15px 8px 20px;
     display: flex;
     justify-content: center;
@@ -10,6 +10,25 @@
     border-radius: 15px;
     border: 1px solid white;
     cursor: pointer;
+    font-family: sans-serif;
+}
+
+/* Colores */
+
+.task-contenedor:nth-child(3n + 2) {
+    background-color: #2d2da5;
+}
+
+.task-contenedor:nth-child(3n + 1) {
+    background-color: #3737bb;
+}
+
+.task-contenedor:nth-child(3n + 3) {
+    background-color: #3c3cc0;
+}
+
+.task-contenedor:nth-child(3n + 4) {
+    background-color: #4e4eeb;
 }
 
 .task-text {

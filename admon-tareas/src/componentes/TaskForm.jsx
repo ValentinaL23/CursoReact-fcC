@@ -8,24 +8,23 @@ function TaskForm(props) {
 
   const manejarCambio = e => {
     setInput(e.target.value);
-  }
+  };
 
-  const manejarEnvío = e => {
+  const manejarEnvio = e => {
     e.preventDefault();
 
     const newTask = {
       id: uuidv4(),
       texto: input,
       completada: false 
-    }
-    
+    };
     props.onSubmit(newTask);
-  }
+  };
 
   return (
     <form 
       className="task-form"
-      onSubmit={manejarEnvío}>
+      onSubmit={manejarEnvio}>
       <input 
         className="task-input"
         type="text"
