@@ -1,0 +1,21 @@
+button {
+    width: 200px;
+    height: 60px;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    color: rgb(252, 128, 128);
+    border: 2px solid white;
+    border-radius: 15px;
+    box-shadow: 7px 7px rgb(178, 135, 231);
+    margin: 12px;
+    cursor: pointer;
+}
+
+button.boton-click:hover {
+    filter: drop-shadow(0 0 1em rgb(126, 99, 247));
+}
+
+button.boton-reiniciar:hover {
+    filter: drop-shadow(0 0 1em rgb(248, 131, 151));
+}
